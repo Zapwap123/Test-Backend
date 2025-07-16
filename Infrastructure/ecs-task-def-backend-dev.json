@@ -1,20 +1,4 @@
 {
-  "family": "backend-dev-task",
-  "networkMode": "awsvpc",
-  "cpu": "512",
-  "memory": "1024",
-  "requiresCompatibilities": ["FARGATE"],
-  "executionRoleArn": "arn:aws:iam::<YOUR_ACCOUNT_ID>:role/ecsTaskExecutionRole",
-  "containerDefinitions": [
-    {
-      "name": "backend",
-      "image": "<IMAGE_TAG>",
-      "portMappings": [
-        {
-          "containerPort": 8080,
-          "protocol": "tcp"
-        }
-      ],{
   "family": "frontend-dev-task",
   "networkMode": "awsvpc",
   "cpu": "512",
@@ -38,19 +22,6 @@
           "awslogs-group": "/ecs/devjobs-frontend",
           "awslogs-region": "eu-central-1",
           "awslogs-stream-prefix": "frontend"
-        }
-      }
-    }
-  ]
-}
-
-      "essential": true,
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "/ecs/devjobs-backend",
-          "awslogs-region": "eu-central-1",
-          "awslogs-stream-prefix": "backend"
         }
       }
     }
