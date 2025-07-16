@@ -33,7 +33,7 @@ jobs:
     secrets:
       AWS_REGION: ${{ secrets.AWS_REGION }}
       AWS_ROLE_TO_ASSUME: ${{ secrets.AWS_ROLE_TO_ASSUME }}
-      ECS_CLUSTER: ${{ secrets.BACKEND_ECS_CLUSTER }}
-      ECS_SERVICE: ${{ secrets.BACKEND_ECS_SERVICE }}
-      TASK_DEF_FILE: ${{ secrets.BACKEND_TASK_DEF_FILE }}
-      ECR_REPO: ${{ secrets.BACKEND_ECR_REPO }}
+      ECS_CLUSTER: ${{ secrets.ECS_CLUSTER }}
+      ECS_SERVICE: ${{ secrets.ECS_SERVICE }}
+      TASK_DEF_FILE: ${{ secrets.TASK_DEF_FILE }}
+      ECR_REPO: ${{ secrets.ECR_REPO }}
